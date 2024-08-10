@@ -1,0 +1,420 @@
+html { 
+    scroll-behavior: fast; /*this can be set smooth para sa smooth scrolling to other parts of the site when nav is clicked*/
+}
+body{
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+#head {
+    background-color: rgba(81, 91, 58, 0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    z-index: 1;
+    position: relative; /* Keep the header in the normal document flow */
+    overflow: hidden;  /* Prevents content from overflowing the header */
+}
+
+
+#myname {
+    color: #E6FAFC;
+    font-family: Roboto, sans-serif;
+    padding-left: 8.33%;
+
+}
+
+#myname a{
+    text-decoration: none;
+    color: #E6FAFC;
+    transition: transform 0.3s ease, font-size 0.3s ease;
+    display: inline-block; 
+}
+
+#myname a:hover {
+    background-color: #515B3A; /* Change background color on hover */
+    border-radius: 2px; 
+    transform: scale(1.2);
+    border-radius: 5px;
+    
+
+}
+
+header h1 {
+    margin: 0;
+    font-size: 50px;
+}
+
+header p{
+    margin: 0;
+    font-size: 20px;
+}
+
+#socmed  {
+    margin-right: 5%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+#socmed .icon {
+    width: 70px; 
+    height: 70px;
+    transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease; /* Smooth transition */
+    transform-origin: center;
+}
+
+#socmed .icon-wrapper {
+    width: 70px;  
+    height: 70px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; 
+}
+
+#socmed .icon:hover {
+    transform: scale(1.2); 
+}
+
+#navigation {
+    display: flex;
+    align-items: center;
+    background-color: #6BA368;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+    font-size: 25px;
+    justify-content: right;
+    width: 100%;
+    z-index: 1000;
+    position:static; /* Start with static positioning */
+    
+}
+
+#navigation.fixed {
+    position: fixed; /*stay in the same position even when the page is scrolled. */
+    top: 0; /*pins the navigation bar to the very top of the screen. */
+    left: 0; /* ensures that the navigation bar is aligned with the left edge of the screen */
+}
+
+#navigation a {
+    margin-right: 5%;
+    text-decoration: none;
+    color: #353D2F;
+    font-family: lato sans-serif;
+    font-weight: 600;
+    padding: 10px 15px; /* Added padding for a better hover effect */
+    transition: transform 0.3s ease, font-size 0.3s ease;
+}
+
+#navigation a:hover {
+    background-color: #9CFC97; /* Change background color on hover */
+    border-radius: 2px; 
+    color: #000; 
+    transform: scale(1.2); /* Increase the size of the text */
+}
+
+.scroll-offset {
+    position: relative;
+}
+
+section {
+    scroll-margin-top: 80px; /*to ensure that the header show when nav link is clicked */
+}
+
+.sections1 {
+    background-color: #9CFC97;
+    font-family: lato;
+    padding: 70px 1% 20px 1% ; 
+    color: #353D2F;
+    
+} 
+
+.sections2 {
+    background-color: rgba(81, 91, 58, 0.75);
+    font-family: lato;
+    padding: 70px 1% 20px 1% ; 
+    color: #E6FAFC;
+}
+
+#cta {
+    font-size: 40px;
+    line-height: 50px;
+}
+
+#cap {
+    font-size: 25px;
+    line-height: 40px;
+}
+
+#herosection {
+    display: flex;
+    align-items: center; /* Centers items vertically if they are different heights */
+    padding: 20px;
+    width: 100%;
+    min-height: 90vh; /* Set a minimum height to make the section a bit longer */
+    max-height: 100vh; /* Set a maximum height to control how long it gets */
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* this the left side section */
+#leftside {
+    flex: 0 0 40%; 
+    margin-right: 20px; /* Space between the left and right sections */
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    text-align: center;
+    padding: 0 5%;
+}
+
+/* this the right side section */
+#herosection > div:last-child {
+    flex: 0 0 60%; /* 60% of the container width */
+}
+
+#herosection img {
+    width: 100%; /* Ensures the image takes up 100% of its container's width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+button {
+    background-color: #515B3A; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 10px 20px; 
+    font-size: 30px; 
+    font-weight: 600;
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease; 
+}
+
+button a {
+    color: #E6FAFC;
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: #6C7B50; 
+    transform: scale(1.1);
+}
+
+
+h2 {
+    font-size: 40px;
+    text-align: center;
+}
+
+#aboutme {
+    padding: 50px 12%;
+    text-align: justify;
+    line-height: 40px;
+}
+
+p {
+    font-size: 25px;
+}   
+
+#aboutme button{
+    background-color: #9CFC97;
+    margin: 20px auto; /* Center the button horizontally and add vertical spacing */
+    display: block;
+}
+
+#aboutme button a{
+    color: #515B3A;
+}
+
+#portfolio p {
+    text-align: center;
+}
+
+.outputs {
+    display:flex;
+    text-wrap: wrap;
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.outputs > div:first-child {
+    flex: 0 0 50%;
+    padding: 2% 2% 2% 8%; /* top, right, bottom, left */
+    box-sizing: border-box;
+}
+
+.outputs img {
+    width: 100%;
+    height: auto; 
+}
+
+caption {
+    display: block;
+    text-align: center;
+    margin-top: 10px; 
+    font-size: 14px; 
+}
+
+.outputs > div:last-child {
+    flex: 0 0 50%;
+    padding: 2% 8% 2% 2%;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    text-align: left;
+
+} 
+
+#certificates {
+    text-align: center;
+    padding: 20px;
+}
+
+.certificateGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px; /* Space between items */
+    padding: 20px 8%;
+    align-items: center;
+    align-content: center;
+}
+
+.certificateGrid .pics img {
+    width: 100%; /* Ensure images fill their containers */
+    height: auto; /* Maintain aspect ratio */
+
+}
+
+@media (max-width: 768px) {
+    .certificateGrid {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+}
+
+.serviceoffered h3 {
+    margin-top: 0; 
+}
+
+#services p {
+    text-align: center;
+}
+
+.servicesGrid {
+    display: grid; /* Enable grid layout */
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    gap: 40px 0; /* Space between grid items */
+    padding: 40px 12% 100px 12%;
+    align-items:flex-start;
+}
+
+.serviceoffered {
+    background-color: rgba(107, 163, 104, 0.5); /* 80% opacity -the first 3 numbers are rgba and the 4th is the opacity*/
+    margin: 5px;
+    padding: 5px;
+    display: flex; 
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+
+.serviceoffered h3{
+    color:#E6FAFC;
+}
+
+ul{
+    list-style: none;
+}
+
+li {
+    margin-bottom: 20px;
+    font-family: lato;
+    font-size: 25px;
+    line-height: 35px;
+}
+
+#contactme p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    align-content: center;
+}
+
+#contactme div {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding-bottom: 10%;
+    padding-top: 5%;
+}
+
+/* #contactme:last-child { 
+    display: flex;
+    align-items: center;
+    align-content: center;
+    overflow: hidden;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width:100%;
+    box-sizing:border-box;
+} */
+
+#contactme img{
+    width: 200px;
+    height: 200px;
+    transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease; /* Smooth transition */
+    transform-origin: center;
+}
+
+#contactme img:hover {
+    transform: scale(1.2); 
+}
+
+#footer {
+    grid-area: 60px / 20% 1fr 15%;;
+    justify-content: center;
+    text-align: center;
+    font-size: 9px;
+    padding: 5px 0 ;
+}
+
+#footer p {
+    margin: 0; /* Remove margin from the paragraph or text element */
+    padding-left: 5px; 
+}
+
+#footer img {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease; /* Smooth transition */
+    transform-origin: center;
+}
+
+#footer img:hover {
+    transform: scale(1.3); 
+}
+
+/* MOBILE VIEW */
+
+@media (max-width: 768px) {
+    #socmed img{
+        display: none;
+    }
+}
+
